@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/dubbodemo_consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/dubbodemo_provider" />
+    <file type="web" url="file://$PROJECT_DIR$/meinian_parent/meinian_jobs" />
+    <file type="web" url="file://$PROJECT_DIR$/meinian_parent/meinian_mobile_web" />
+    <file type="web" url="file://$PROJECT_DIR$/meinian_parent/meinian_service" />
+    <file type="web" url="file://$PROJECT_DIR$/meinian_parent/meinian_web" />
+    <file type="web" url="file://$PROJECT_DIR$/spring_security_demo" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/dubbodemo_provider/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbodemo_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbodemo_interface/pom.xml" />
+        <option value="$PROJECT_DIR$/meinian_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_security_demo/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

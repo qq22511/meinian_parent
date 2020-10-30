@@ -1,0 +1,12 @@
+com\atguigu\dao\TravelGroupDao.class
+com\atguigu\dao\ReportDao.class
+com\atguigu\dao\UserDao.class
+com\atguigu\dao\LoginDao.class
+com\atguigu\dao\TraveltemDao.class
+com\atguigu\dao\PermissionDao.class
+com\atguigu\dao\OrderDao.class
+com\atguigu\dao\OrderSettingDao.class
+com\atguigu\dao\RoleDao.class
+com\atguigu\dao\AddressDao.class
+com\atguigu\dao\MemberDao.class
+com\atguigu\dao\SetmealDao.class

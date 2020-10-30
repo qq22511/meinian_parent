@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_mobile_web/src/main/webapp/pages/orderInfo.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_mobile_web/src/main/webapp/pages" />
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages/main.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages" />
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages/ordersetting.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages" />
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages/report_business.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages" />
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages/setmeal.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages" />
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages/travelgroup.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages" />
+        <entry key="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages/travelitem.html" value="file://$PROJECT_DIR$/meinian_parent/meinian_web/src/main/webapp/pages" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.atguigu.dao.SetmealDao">
+
+    <!--================================添加================================-->
+    <!--新增-->
+    <insert id="add" parameterType="setmeal">
+        <selectKey resultType="int" order="AFTER" keyProperty="id">
+            SELECT LAST_INSERT_ID()
+
+        </selectKey>
+        insert into t_setmeal(name,code,helpCode,sex,age,price,remark,attention,img) values (#{name},#{code},#{helpCode},#{sex},#{age},#{price},#{remark},#{attention},#{img})
+
+    </insert>
+
+    <!--绑定套餐和跟团游多对多关系-->
+    <insert id="setSetmealAndTravelGroup" parameterType="map">
+        insert into
+        t_setmeal_travelgroup(setmeal_id,travelgroup_id)
+        values (#{setmeal_id},#{travelgroup_id})
+    </insert>
+
+    <!--================================查询================================-->
+    <!--Page< Setmeal> findByPage(String queryString);-->
+
+    <select id="findByPage" parameterType="string" resultType="Setmeal">
+        select * from t_setmeal
+        <where>
+            <if test="value !=null and value.length > 0">
+                name like "%"#{value}"%" or code = #{value} or helpCode = #{value}
+            </if>
+        </where>
+    </select>
+
+
+    <!--List< Setmeal> findAll();-->
+    <select id="findAll" resultType="Setmeal">
+        select * from t_setmeal
+    </select>
+
+    <!--Setmeal findById(Integer id);-->
+    <select id="findById" parameterType="int" resultType="Setmeal">
+        select * from  t_setmeal where id = #{id}
+    </select>
+
+    <!--多表查询-->
+
+    <resultMap id="findByIdResultMap" type="setmeal">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="code" property="code"></result>
+        <result column="helpCode" property="helpCode"></result>
+        <result column="sex" property="sex"></result>
+        <result column="age" property="age"></result>
+        <result column="price" property="price"></result>
+        <result column="remark" property="remark"></result>
+        <result column="attention" property="attention"></result>
+        <result column="img" property="img"></result>
+        <collection column="id"  property="travelGroups"
+           select="com.atguigu.dao.TravelGroupDao.findTravelGroupListById"></collection>
+
+    </resultMap>
+
+
+    <select id="findAllById" parameterType="int"  resultMap="findByIdResultMap">
+        select * from t_setmeal where  id = #{id}
+    </select>
+
+
+    <!--List< Map< String, Object>> findSetmealCount();-->
+    <select id="findSetmealCount" resultType="map">
+        select s.name name ,count(1) value from t_order o ,t_setmeal s
+        where o.setmeal_id = s.id
+        group by o.setmeal_id
+    </select>
+</mapper>

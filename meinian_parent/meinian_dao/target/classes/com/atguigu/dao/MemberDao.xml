@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.dao.MemberDao">
+    <!--================================查询================================-->
+
+    <!--查询当前月份所有会员的个数-->
+    <!--Integer findSetmealCount(String lastDayOfMonth);-->
+
+    <select id="findMemberCountBeforeDate" parameterType="string" resultType="int">
+        select count(*) from t_member where regTime &lt;= #{lastDayOfMonth}
+    </select>
+
+    <!--通过电话查询会员-->
+    <!-- Member findByTelephone(String telephone);-->
+    <select id="findByTelephone" parameterType="string" resultType="member">
+        select * from t_member where  phoneNumber = #{telephone}
+    </select>
+
+    <!--今日增加的会员数-->
+    <!--int getTodayNewMember(String today);-->
+    <select id="getTodayNewMember" parameterType="string" resultType="int">
+        select count(1) from t_member where regTime = #{today}
+    </select>
+
+    <!--总会员数-->
+    <!--int getTotalMember();-->
+    <select id="getTotalMember" resultType="int">
+        select count(1) from t_member
+    </select>
+
+    <!--每周或者每月新增加的会员数量-->
+    <!--int getThisWeekAndMonthNewMember(String weekMonday);-->
+    <select id="getThisWeekAndMonthNewMember" parameterType="string" resultType="int">
+        select count(1) from t_member where regTime  &gt;= #{value }
+    </select>
+    <!--================================添加================================-->
+    <!--void add(Member member);-->
+    <insert id="add" parameterType="member" keyProperty="id" useGeneratedKeys="true">
+        insert into t_member (         fileNumber,         name,         sex,         idCard,         phoneNumber,         regTime,         password,         email,         birthday,         remark    )
+        values (     #{fileNumber},     #{name},     #{sex},     #{idCard},     #{phoneNumber},     #{regTime},     #{password},     #{email},     #{birthday},     #{remark})
+
+    </insert>
+</mapper>

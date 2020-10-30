@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="dubbodemo_interface" />
+        <module name="meinian_mobile_web" />
+        <module name="meinian_dao" />
+        <module name="meinian_interface" />
+        <module name="meinian_service" />
+        <module name="meinian_common" />
+        <module name="meinian_jobs" />
+        <module name="spring_security_demo" />
+        <module name="meinian_web" />
+        <module name="meinian_pojo" />
+        <module name="dubbodemo_consumer" />
+        <module name="dubbodemo_provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbodemo_consumer" target="1.8" />
+      <module name="dubbodemo_interface" target="1.8" />
+      <module name="dubbodemo_provider" target="1.8" />
+      <module name="meinian_common" target="1.8" />
+      <module name="meinian_dao" target="1.8" />
+      <module name="meinian_interface" target="1.8" />
+      <module name="meinian_jobs" target="1.8" />
+      <module name="meinian_mobile_web" target="1.8" />
+      <module name="meinian_parent" target="1.8" />
+      <module name="meinian_pojo" target="1.8" />
+      <module name="meinian_service" target="1.8" />
+      <module name="meinian_web" target="1.8" />
+      <module name="spring_security_demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

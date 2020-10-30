@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.dao.LoginDao">
+
+    <!--================================查询================================-->
+    <!--通过电话查询是否存在该用户-->
+    <!--Member findByTelephone(String telephone);-->
+    <select id="findByTelephone" parameterType="string" resultType="member">
+        select * from t_member where phoneNumber = #{telephone}
+    </select>
+    <!--================================添加================================-->
+    <!--void add(Member member);-->
+    <insert id="add" parameterType="member" >
+        insert into t_member (fileNumber,         name,         sex,         idCard,         phoneNumber,         regTime,         password,         email,         birthday,         remark  )
+        values (        #{fileNumber},        #{name},        #{sex},        #{idCard},        #{phoneNumber},        #{regTime},        #{password},        #{email},        #{birthday},        #{remark})
+    </insert>
+</mapper>
